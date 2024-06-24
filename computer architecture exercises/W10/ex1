@@ -1,0 +1,26 @@
+.data
+
+enterNumMsg: .string "Please enter a whole number: ",
+addr: .string " + "
+equals: .string " = "
+
+.text
+
+addi a7, zero, 4 #stores value for print string in a7
+la a0 enterNumMsg #load address of string using its label
+ecall
+
+addi s10, zero, 5
+addi a7, zero, 1
+
+loop:
+  addi a7, zero, 1
+  add a0, zero , s10
+  ecall
+  
+  addi s10, s10, -1
+  addi a7, zero, 11
+  addi a0 ,zero , '\n'
+  ecall
+  
+  bnez s10, loop
