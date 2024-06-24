@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Cart</title>
+    <!-- Use local path or CDN for Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="img/logo.png" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a class="active" href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <main>
+        <section id="cart" class="section-p1">
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <td>Remove</td>
+                        <td>Product</td>
+                        <td>Price</td>
+                        <td>Quantity</td>
+                        <td>Subtotal</td>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    <tr>
+                        <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                        <td>The Maze Runner</td>
+                        <td>£7.49</td>
+                        <td><input type="number" value="0" class="quantity" min="1"></td>
+                        <td class="subtotal">£7.49</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                        <td>Those People Next Door</td>
+                        <td>£8.99</td>
+                        <td><input type="number" value="0" class="quantity" min="1"></td>
+                        <td class="subtotal">£8.99</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                        <td>Percy Jackson and the Lightning Thief</td>
+                        <td>£9.49</td>
+                        <td><input type="number" value="0" class="quantity" min="1"></td>
+                        <td class="subtotal">£9.49</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                        <td>The Book Thief</td>
+                        <td>£10.49</td>
+                        <td><input type="number" value="0" class="quantity" min="1"></td>
+                        <td class="subtotal">£10.49</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                        <td>The Things We Cannot Say</td>
+                        <td>£11.99</td>
+                        <td><input type="number" value="0" class="quantity" min="1"></td>
+                        <td class="subtotal">£11.99</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div id="total"></div>
+        </section>
+    </main>
+
+    <form id="payment-form">
+        <label for="card">Card Number</label>
+        <input type="text" id="card" placeholder="Please enter the card number">
+        <br><br>
+        <label for="expiry_month">Expiry</label>
+        <select id="expiry_month">
+            <option value="">Month</option>
+            <option value="1">01</option>
+            <option value="2">02</option>
+            <option value="3">03</option>
+            <option value="4">04</option>
+            <option value="5">05</option>
+            <option value="6">06</option>
+            <option value="7">07</option>
+            <option value="8">08</option>
+            <option value="9">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+        <select id="expiry_year">
+            <option value="">Year</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+            <option value="2027">2027</option>
+        </select>
+        <br><br>
+        <label for="security">CVV Code</label>
+        <input type="text" id="security" placeholder="Please enter CVV">
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script src="script.js"></script>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img/logo.PNG" width="125" height="75">
+            <h4>Contact</h4>
+            <p><strong>Phone: </strong>+(44) 7402181472</p>
+            <p><strong>Hours: </strong>Mon - Fri / 09:00 - 17:00</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Terms & Conditions</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col">
+            <h4>Payment</h4>
+            <p>Secured Payment Gateways</p>
+            <img src="img/Pay.png" width="200" height="125">
+        </div>
+    </footer>
+</body>
+</html>

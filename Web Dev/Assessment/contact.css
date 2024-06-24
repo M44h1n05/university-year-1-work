@@ -1,0 +1,239 @@
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    text-decoration: none;
+    font-size: 10pt;
+}
+
+.section-p1 {
+    padding: 50px 50px;
+}
+
+li {
+    list-style-type: none;
+    padding: 0%;
+    margin: 0%;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: #ebeefa;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 5%;
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: rgb(0, 162, 255);
+}
+
+#hero h2, #hero p, #product h2, #product p {
+    text-align: center;
+}
+
+
+#feature {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#feature .fe-box {
+    width: 180px;
+    height: 180px;
+    text-align: center;
+    padding: 5px 5px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+    border: 2px solid #5c6d61;
+    border-radius: 4px;
+    margin: 15px 0px;
+    position: relative;
+}
+
+#feature .fe-box:hover {
+    box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
+}
+
+#feature .fe-box img {
+    width: 100%;
+    margin-bottom: 2px;
+}
+
+#feature .fe-box h4 {
+    margin-top: -2px;
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color: #088178;
+    background-color: #fddde4;
+}
+
+#feature .fe-box:nth-child(2) h4 {
+    background-color: rgb(196, 240, 138);
+}
+
+#feature .fe-box:nth-child(3) h4 {
+    background-color: rgb(121, 236, 231);
+}
+
+.pro-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+
+
+
+.product {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    width: 100%; 
+    box-sizing: border-box;
+    display: flex; /* Use flexbox to align items */
+    align-items: flex-start; /* Align items at the start of the container */
+    margin-bottom: 20px; 
+}
+
+.product .info {
+    display: flex;
+    align-items: flex-start;
+    margin-right: 20px; /* Adjust margin to create space between image and text */
+}
+
+.product .info img {
+    margin-right: 10px;
+}
+
+.product .des {
+    text-align: left;
+}
+
+.product .star {
+    color: #ff9800;
+}
+
+.product .price {
+    font-size: 16px;
+    color: #333;
+    margin-top: 5px;
+}
+
+.product .description {
+    text-align: left;
+    flex-grow: 1; /* Allow the description to grow to fill remaining space */
+}
+
+.product .description p {
+    margin-bottom: 10px;
+}
+
+.product .description a {
+    color: blue;
+    text-decoration: underline;
+}
+
+.product a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #000;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.product a:hover {
+    color: rgb(0, 162, 255);
+}
+
+
+
+
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+footer.logo{
+    margin-bottom: 30px;
+}
+
+footer h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+footer p{
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+
+footer a{
+    font-size: 13px;
+    text-decoration: none;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+footer .follow{
+    margin-top: 20px;
+}
+
+footer .follow i{
+    color: #465b52;
+    padding-right: 4px ;
+    cursor: pointer;
+}
+
+
+
+@media (max-width:799px) {
+    #navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: 0px;
+        height: 100vh;
+        width: 100px;
+  }
+}
+

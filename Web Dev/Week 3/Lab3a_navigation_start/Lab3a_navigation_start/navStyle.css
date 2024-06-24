@@ -1,0 +1,38 @@
+﻿@charset "UTF-8";
+
+body
+{
+	list-style-type: none;
+	margin: 0;
+ 	padding: 0;
+	font-family: arial, verdana, helvetica, sans-serif;
+}
+
+a {text-decoration: none;}
+
+ul{
+	list-style-type: none;
+}
+
+ul,li{
+	margin: 0;
+	padding: 0%;
+}
+
+#nav1 a{
+	border-bottom: 1px solid #708090;
+	display: block;
+}
+
+#nav1 ul{
+	width: 140px;
+	border: 1px;
+	margin: 5px;
+	padding: 10%;
+
+}
+
+a:hover {
+	background-color: yellow;
+  }
+

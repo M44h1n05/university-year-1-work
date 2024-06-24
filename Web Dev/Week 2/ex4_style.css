@@ -1,0 +1,30 @@
+body
+{
+    background-color:rgb(111, 209, 175);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    text-decoration:underline;
+    font-size: 12pt;
+
+
+    .square {
+        width: 125px;
+        height: 100px;
+    }
+
+    #square1 {
+        background-color: red;
+    }
+
+    #square2 {
+        background-color: blue;
+    }
+
+    #square3 {
+        background-color: yellow;
+    }
+
+    .right {
+        float: right;
+    }
+}

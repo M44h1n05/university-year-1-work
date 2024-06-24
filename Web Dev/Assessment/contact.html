@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Bookshop</title>
+    <!-- Use local path or CDN for Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script>
+    function handleSubmit(event) {
+        event.preventDefault(); // Prevent default form submission
+        
+        // Check if all fields are filled
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var message = document.getElementById('message').value;
+
+        if (name && email && message) {
+            // Display message
+            alert("Message sent!");
+
+            // Clear form fields
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('message').value = '';
+        } else {
+            // If any field is empty, display an error message
+            alert("Please fill in all fields.");
+        }
+    }
+</script>
+
+<body>
+    <section id="header">
+        <a href="#"><img src="img/logo.png" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a class="active" href="contact.html">Contact</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+    <form id="contactForm" onsubmit="handleSubmit(event)">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message"></textarea><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>Date of birth</h2>
+    <select id="Date" name="Date"> 
+        <option value="01">01</option>
+        <option value="02">02</option>
+        <option value="03">03</option>
+        <option value="04">04</option>
+        <option value="05">05</option>
+        <option value="06">06</option>
+        <option value="07">07</option>
+        <option value="08">08</option>
+        <option value="09">09</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        <option value="31">31</option>
+        
+    </select>
+    <select id="Month" name="Month"> 
+        <option value="01">January</option>
+        <option value="02">February</option>
+        <option value="03">March</option>
+        <option value="04">April</option>
+        <option value="05">May</option>
+        <option value="06">June</option>
+        <option value="07">July</option>
+        <option value="08">August</option>
+        <option value="09">September</option>
+        <option value="10">October</option>
+        <option value="11">November</option>
+        <option value="12">December</option>
+        
+    </select> 
+    <select id="Year" name="Year"> 
+        <option value="01">1975</option>
+        <option value="02">1976</option>
+        <option value="03">1977</option>
+        <option value="04">1978</option>
+        <option value="05">1979</option>
+        <option value="06">1980</option>
+        <option value="07">1981</option>
+        <option value="08">1982</option>
+        <option value="09">1983</option>
+        <option value="10">1984</option>
+        <option value="11">1985</option>
+        <option value="12">1986</option>
+        <option value="13">1987</option>
+        <option value="14">1988</option>
+        <option value="15">1989</option>
+        <option value="16">1990</option>
+        <option value="17">1991</option>
+        <option value="18">1992</option>
+        <option value="19">1993</option>
+        <option value="20">1994</option>
+        <option value="21">1995</option>
+        <option value="22">1996</option>
+        <option value="23">1997</option>
+        <option value="24">1998</option>
+        <option value="25">1999</option>
+        <option value="26">2000</option>
+        <option value="27">2001</option>
+        <option value="28">2002</option>
+        <option value="29">2003</option>
+        <option value="30">2004</option>
+        <option value="31">2005</option>
+        <br><br>
+        
+    </select> <br>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label> <br>
+    <input type="submit" value="submit">
+
+    <script src="script.js"></script>
+</body>
+</html>
