@@ -1,0 +1,83 @@
+.data
+enterMsg1: .string "Please enter the last four digits of your student id \n"
+enterMsg2: .string "Press enter between each digit \n"
+enterMsg3: .string "Enter next digit \n"
+enterMsg4: .string "The total division of the digits by 1000 is: "
+enterMsg5: .string "The total remainders of the digits are: "
+.text
+
+# output the initial instruction text to the console
+addi a7, zero, 4
+la a0, enterMsg1
+ecall
+
+# output second message
+addi a7, zero, 4
+la a0, enterMsg2
+ecall
+
+# initialize s0
+addi s0, zero, 0
+
+# read four integers from keyboard input and store the inputs
+jal Enternum
+jal Enternum
+jal Enternum
+jal Enternum
+
+# display 4th message
+addi a7, zero, 4
+la a0, enterMsg4
+ecall
+
+add a0, t1, zero  # Display the result of the division
+addi a7, zero, 1
+ecall
+
+# Add a newline
+addi a0, zero, '\n'
+addi a7, zero, 11
+ecall
+
+# display 5th message
+addi a7, zero, 4
+la a0, enterMsg5
+ecall
+
+add a0, s0, zero  # Display the result of the remainders
+addi a7, zero, 1
+ecall
+
+# Exit the program
+addi a7, zero, 10
+ecall
+
+# subroutine code
+Enternum:
+addi a7, zero, 4
+la a0, enterMsg3
+ecall
+
+addi a7, zero, 5
+ecall
+
+# Multiply the existing value by 10 before adding the new digit
+addi t3, zero, 10
+mul t0, s0, t3 
+
+# Add the new digit
+add t0, t0, a0
+
+# Set register s1 to 10
+addi s1, zero, 10
+
+# Set register t2 to 1000
+addi t2, zero, 1000
+
+# Divide t0 by t2 and store the integer result in t1
+divu t1, t0, t2
+
+# Update s0 to be the remainder of t0 divided by t2
+remu s0, t0, t2
+
+ret
